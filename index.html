@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formel 0.19</title>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/gmynd.js"></script>
+    <script src="lib/Treemap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+</head>
+
+<body>
+    <div class="headline">
+        <h1>formula 1 incidents</h1>
+        <h4>1950 to 2023</h4>
+    </div>
+
+    <div id="intro-screen" class="screen">
+        <h2>formula 1 incidents</h2>
+        <p><br>The data visualization covers Formula 1, particularly incidents on race tracks from 1950 to 2023. It
+            provides
+            an
+            overview of the individual incidents during races and highlights the developments of various constructors.
+            <br><br><br> Helen Frank <br> Programmiertes Entwerfen 2 <br>
+            Interaktionsgestaltung 2 - SoSe 2024
+        </p>
+        <div id="toggleBtn1">Start</div>
+    </div>
+
+    <div id="renderer">
+    </div>
+
+    <button class="toggleBtn">incidents</button>
+
+    <script src="js/driver.js"></script>
+    <script src="js/statusCases.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/constructor.js"></script>
+    <script src="js/race.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById("arrow").addEventListener("click", function () {
+            document.getElementById("intro-screen").style.display = "none";
+            document.getElementById("renderer").style.display = "block";
+        });
+    </script>
+
+</body>
+
+</html>

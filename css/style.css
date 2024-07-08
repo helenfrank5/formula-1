@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(233, 233, 233);
+  padding: 0 100px;
+}
+h1 {
+  font-family: "Helvetica", light;
+  font-weight: 600;
+  color: black;
+  font-size: 40px; /* Beispielgröße, passe diese nach Bedarf an */
+  padding-top: 60px;
+  padding-bottom:3px;
+  padding-left: 3px;
+}
+h2{
+    font-family: "Helvetica", light;
+    font-size: 30px;
+  font-weight: 600;
+  color: black;
+}
+h4 {
+  font-family: "Helvetica", light;
+  font-weight: 500;
+  color: rgb(41, 41, 41);
+  font-size: 15px; /* Beispielgröße, passe diese nach Bedarf an */
+  padding-left: 4px;
+}
+text {
+  font-size: 10px;
+  font-family: "Helvetica", italic;
+}
+.headline {
+  height: 11vh;
+}
+#renderer {
+  background-color: rgb(233, 233, 233);
+  width: 100%; /* Ändere diesen Wert nach Bedarf */
+  height: 77vh;
+  position: relative;
+  margin: 50px auto; 
+}
+.screen {
+  position: fixed; /* Setze position auf fixed */
+  top: 0; 
+  left: 0; 
+  width: 100vw; /* Stellt sicher, dass es die gesamte Breite einnimmt */
+  height: 100vh; /* Stellt sicher, dass es die gesamte Höhe einnimmt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1; /* Setze den z-index höher als den von .toggleBtn */
+}
+
+
+#intro-screen {
+  font-family: "Helvetica", light;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+    background-color: rgb(233, 233, 233);
+    padding-left: 200px;
+    padding-right: 750px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#intro-screen h2 {
+  font-family: "Helvetica", light;
+  font-weight: 600;
+  font-size: 40px;
+  color: black;
+  display: block;
+  margin-bottom: 10px; /* Optional: Abstand zwischen Überschrift und Text */
+    text-align: left;
+    align-self: flex-start; /* Das h2 linksbündig positionieren */
+}
+
+#toggleBtn1 {
+  cursor: pointer;
+  position: absolute;
+  padding: 4px 16px;
+  bottom: 250px;
+  left: 200px;
+  align-items: center;
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(99, 99, 99);
+  font: Helvetica;
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.bar {
+  position: absolute;
+  text-align: center;
+  padding-top: 10px;
+}
+.barConst {
+  background-color: rgb(208, 208, 208);
+  position: absolute;
+  text-align: center;
+}
+.toggleBtn {
+  cursor: pointer;
+  position: absolute;
+  padding: 4px 16px;
+  top: 101px;
+  right: 106px;
+  align-items: center;
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(99, 99, 99);
+  font: Helvetica;
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 0;
+}
+.tooltip {
+  position: absolute;
+  font-family: Helvetica;
+  font-weight: 300;
+  padding: 10px;
+  background-color: rgb(237, 237, 237);
+  border: 1px solid rgb(99, 99, 99);
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 11px;
+  z-index: 1000;
+  color: black;
+  line-height: '20';
+  pointer-events: none; /* Tooltip soll keine Ereignisse blockieren */
+  display: none; /* Anfangs verstecken */
+}
+.treemap-item {
+  border-radius: 4px;
+  border: none;
+  transition: opacity 0.5s ease-in-out; /* Hier wird die Übergangsanimation für die Opacity definiert */
+  position: absolute;
+}
